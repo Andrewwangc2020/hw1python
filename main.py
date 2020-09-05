@@ -20,32 +20,23 @@ def letterToValue():
   else:
     return 0.0;
 
-weight = 0.0;
-credits = 0.0;
-
 lettergrade = input("Enter your course 1 letter grade: ");
-l = letterToValue();
+gradepoint1 = letterToValue();
 c = input("Enter your course 1 credit: ");
-tempCredit = int(c);
-weight += l * tempCredit;
-credits += tempCredit;
-print(f"Grade point for course 1 is: {l}");
+credit1 = int(c);
+print(f"Grade point for course 1 is: {gradepoint1}");
 
 lettergrade = input("Enter your course 2 letter grade: ");
-l = letterToValue();
+gradepoint2 = letterToValue();
 c = input("Enter your course 2 credit: ");
-tempCredit = int(c);
-weight += l * tempCredit;
-credits += tempCredit;
-print(f"Grade point for course 2 is: {l}");
+credit2 = int(c);
+print(f"Grade point for course 2 is: {gradepoint2}");
 
 lettergrade = input("Enter your course 3 letter grade: ");
-l = letterToValue();
+gradepoint3 = letterToValue();
 c = input("Enter your course 3 credit: ");
-tempCredit = int(c);
-weight += l * tempCredit;
-credits += tempCredit;
-print(f"Grade point for course 3 is: {l}");
+credit3 = int(c);
+print(f"Grade point for course 3 is: {gradepoint3}");
 
-gpa = weight/credits;
+gpa = (gradepoint1 * credit1 + gradepoint2 * credit2 + gradepoint3 * credit3) / (credit1 + credit2 + credit3) 
 print(f"Your GPA is: {gpa}");
